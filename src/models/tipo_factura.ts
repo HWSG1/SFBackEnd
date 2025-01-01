@@ -26,6 +26,8 @@ export const TipoFactura = sequelize.define('tipoFactura',{
   modificado_por: {
     type: DataTypes.STRING(50),
     allowNull: true
+
+    
   },
   fecha_modificacion: {
     type: DataTypes.DATE,
