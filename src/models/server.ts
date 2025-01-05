@@ -2,6 +2,7 @@ import express, {Application} from 'express';
 import routesProductos from '../routes/products.router';
 import routesUsuarios from '../routes/usuario.router';
 import sequelize from '../database/connection';
+import cors from 'cors';
 
 class Server {
 private app: Application;
@@ -28,6 +29,10 @@ private port: string | undefined;
     }
     mildwares(){
         this.app.use(express.json());
+        const allowedOrigin = process.env.HOST;
+        this.app.use(cors({
+            origin: allowedOrigin
+        }));
     }
     async dbConnect(){
         try {

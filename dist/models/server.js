@@ -16,6 +16,7 @@ const express_1 = __importDefault(require("express"));
 const products_router_1 = __importDefault(require("../routes/products.router"));
 const usuario_router_1 = __importDefault(require("../routes/usuario.router"));
 const connection_1 = __importDefault(require("../database/connection"));
+const cors_1 = __importDefault(require("cors"));
 class Server {
     constructor() {
         console.log('Iniciando constructor en el server');
@@ -38,6 +39,10 @@ class Server {
     }
     mildwares() {
         this.app.use(express_1.default.json());
+        const allowedOrigin = process.env.HOST;
+        this.app.use((0, cors_1.default)({
+            origin: allowedOrigin
+        }));
     }
     dbConnect() {
         return __awaiter(this, void 0, void 0, function* () {
