@@ -7,7 +7,7 @@ const express_1 = require("express");
 const products_controller_1 = require("../controllers/products.controller");
 const validar_token_1 = __importDefault(require("./validar-token"));
 const router = (0, express_1.Router)();
-router.get('/', validar_token_1.default, products_controller_1.getProductos);
+router.get('/', products_controller_1.getProductos);
 router.get('/getProductosActivos', validar_token_1.default, products_controller_1.getProductosActivos);
 router.get('/getProductosInactivos', validar_token_1.default, products_controller_1.getProductosInactivos);
 exports.default = router;
