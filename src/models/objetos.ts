@@ -46,6 +46,10 @@ export const Objetos = sequelize.define('objetos',{
   estado: {
     type: DataTypes.INTEGER,
     allowNull: false
+  },
+  tipo: {
+    type: DataTypes.TEXT,
+    allowNull: false
   }
 }, 
 {

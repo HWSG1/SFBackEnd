@@ -83,6 +83,10 @@ exports.Objetos = connection_1.default.define('objetos', {
     estado: {
         type: sequelize_1.DataTypes.INTEGER,
         allowNull: false
+    },
+    tipo: {
+        type: sequelize_1.DataTypes.TEXT,
+        allowNull: false
     }
 }, {
     tableName: 'objetos',

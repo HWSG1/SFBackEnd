@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const products_router_1 = __importDefault(require("../routes/products.router"));
 const usuario_router_1 = __importDefault(require("../routes/usuario.router"));
+const objetos_router_1 = __importDefault(require("../routes/objetos.router"));
 const connection_1 = __importDefault(require("../database/connection"));
 const cors_1 = __importDefault(require("cors"));
 class Server {
@@ -36,6 +37,7 @@ class Server {
     routes() {
         this.app.use('/api/productos', products_router_1.default);
         this.app.use('/api/usuarios', usuario_router_1.default);
+        this.app.use('/api/objetos', objetos_router_1.default);
     }
     mildwares() {
         this.app.use(express_1.default.json());
