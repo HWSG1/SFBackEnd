@@ -50,7 +50,7 @@ const getObjetosSidebar = (req, res) => __awaiter(void 0, void 0, void 0, functi
             }
         });
         // Ordenar los resultados manualmente
-        const order = ['Dashboard', 'Ventas', 'Compras', 'Reportes'];
+        const order = ['Dashboard', 'Ventas', 'Compras', 'Reportes', 'Mantenimiento'];
         const orderedObjetos = getAllObjetos.sort((a, b) => {
             return order.indexOf(a.get('nombre_objeto')) - order.indexOf(b.get('nombre_objeto'));
         });

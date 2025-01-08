@@ -41,7 +41,7 @@ export const getObjetosSidebar = async (req: Request, res: Response) => {
         });
 
         // Ordenar los resultados manualmente
-        const order = ['Dashboard', 'Ventas', 'Compras', 'Reportes'];
+        const order = ['Dashboard', 'Ventas', 'Compras', 'Reportes','Mantenimiento'];
         const orderedObjetos = getAllObjetos.sort((a, b) => {
             return order.indexOf(a.get('nombre_objeto') as string) - order.indexOf(b.get('nombre_objeto') as string);
         });
