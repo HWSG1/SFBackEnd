@@ -23,33 +23,68 @@ const Usuarios = sequelize.define('usuarios',{
     allowNull: false,
     unique: true,
   },
+  nombre_1:{
+    type: DataTypes.STRING(50),
+    allowNull: false,
+    unique: true,
+  },
+  nombre_2:{    
+    type: DataTypes.STRING(50),
+    allowNull: true,
+    unique: true,},
+  nombre_3:{
+    type: DataTypes.STRING(50),
+    allowNull: false,
+    unique: true,
+  },
+  nombre_4:{    
+    type: DataTypes.STRING(50),
+    allowNull: true,
+    unique: true,
+  },
   password: {
     type: DataTypes.STRING(100),
     allowNull: false
   },
+  DNI: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  RTN: {
+    type: DataTypes.INTEGER,
+    allowNull: true,
+  },
+  pasaporte: {
+    type: DataTypes.STRING(100),
+    allowNull: false,
+  },
+  carnet_de_residente: {
+    type: DataTypes.STRING(100),
+    allowNull: true,
+  },
   email: {
     type: DataTypes.STRING(100),
-    allowNull: false
+    allowNull: false,
   },
   fecha_ultimo_acceso: {
     type: DataTypes.DATE,
-    allowNull: true
+    allowNull: true,
   },
   fecha_ultimo_cambio_password: {
     type: DataTypes.DATE,
-    allowNull: true
+    allowNull: true,
   },
   intentos_fallidos: {
     type: DataTypes.INTEGER,
-    allowNull: true
+    allowNull: true,
   },
   vigencia_dias: {
     type: DataTypes.INTEGER,
-    allowNull: false
+    allowNull: false,
   },
   creado_por: {
     type: DataTypes.STRING(50),
-    allowNull: false
+    allowNull: false,
   },
   fecha_creacion: {
     type: DataTypes.DATE,

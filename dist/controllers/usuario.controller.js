@@ -67,7 +67,7 @@ const getUsuariosInactivos = (req, res) => __awaiter(void 0, void 0, void 0, fun
 exports.getUsuariosInactivos = getUsuariosInactivos;
 const nuevoUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     //creación del objeto con las propiedades de la tabla de usuarios de la base de datos
-    const { usuario_id, rol_id, nombre_usuario, password, email, fecha_ultimo_acceso, fecha_ultimo_cambio_password, intentos_fallidos, vigencia_dias, creado_por, fecha_creacion, modificado_por, fecha_modificacion, estado } = req.body;
+    const { usuario_id, rol_id, nombre_usuario, nombre_1, nombre_2, nombre_3, nombre_4, password, DNI, RTN, Pasaporte, carnet_de_residente, email, fecha_ultimo_acceso, fecha_ultimo_cambio_password, intentos_fallidos, vigencia_dias, creado_por, fecha_creacion, modificado_por, fecha_modificacion, estado } = req.body;
     // Verificar si el usuario ya existe
     const usuarioExistente = yield usuarios_1.default.findOne({
         where: { nombre_usuario: nombre_usuario }
@@ -84,7 +84,15 @@ const nuevoUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function* (
             usuario_id: usuario_id,
             rol_id: rol_id,
             nombre_usuario: nombre_usuario,
+            nombre_1: nombre_1,
+            nombre_2: nombre_2,
+            nombre_3: nombre_3,
+            nombre_4: nombre_4,
             password: hashedPassword,
+            DNI: DNI,
+            RTN: RTN,
+            pasaporte: Pasaporte,
+            carnet_de_residente: carnet_de_residente,
             email: email,
             fecha_ultimo_acceso: fecha_ultimo_acceso,
             fecha_ultimo_cambio_password: fecha_ultimo_cambio_password,

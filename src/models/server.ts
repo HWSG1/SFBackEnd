@@ -2,6 +2,7 @@ import express, {Application} from 'express';
 import routesProductos from '../routes/products.router';
 import routesUsuarios from '../routes/usuario.router';
 import routesObjetos from '../routes/objetos.router';
+import routesRoles from '../routes/roles.router';
 import sequelize from '../database/connection';
 import cors from 'cors';
 
@@ -28,6 +29,7 @@ private port: string | undefined;
         this.app.use('/api/productos', routesProductos);
         this.app.use('/api/usuarios', routesUsuarios);
         this.app.use('/api/objetos', routesObjetos);
+        this.app.use('/api/roles', routesRoles);
     }
     mildwares(){
         this.app.use(express.json());

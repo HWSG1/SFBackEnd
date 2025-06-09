@@ -59,33 +59,69 @@ const Usuarios = connection_1.default.define('usuarios', {
         allowNull: false,
         unique: true,
     },
+    nombre_1: {
+        type: sequelize_1.DataTypes.STRING(50),
+        allowNull: false,
+        unique: true,
+    },
+    nombre_2: {
+        type: sequelize_1.DataTypes.STRING(50),
+        allowNull: true,
+        unique: true,
+    },
+    nombre_3: {
+        type: sequelize_1.DataTypes.STRING(50),
+        allowNull: false,
+        unique: true,
+    },
+    nombre_4: {
+        type: sequelize_1.DataTypes.STRING(50),
+        allowNull: true,
+        unique: true,
+    },
     password: {
         type: sequelize_1.DataTypes.STRING(100),
         allowNull: false
     },
+    DNI: {
+        type: sequelize_1.DataTypes.INTEGER,
+        allowNull: false,
+    },
+    RTN: {
+        type: sequelize_1.DataTypes.INTEGER,
+        allowNull: true,
+    },
+    pasaporte: {
+        type: sequelize_1.DataTypes.STRING(100),
+        allowNull: false,
+    },
+    carnet_de_residente: {
+        type: sequelize_1.DataTypes.STRING(100),
+        allowNull: true,
+    },
     email: {
         type: sequelize_1.DataTypes.STRING(100),
-        allowNull: false
+        allowNull: false,
     },
     fecha_ultimo_acceso: {
         type: sequelize_1.DataTypes.DATE,
-        allowNull: true
+        allowNull: true,
     },
     fecha_ultimo_cambio_password: {
         type: sequelize_1.DataTypes.DATE,
-        allowNull: true
+        allowNull: true,
     },
     intentos_fallidos: {
         type: sequelize_1.DataTypes.INTEGER,
-        allowNull: true
+        allowNull: true,
     },
     vigencia_dias: {
         type: sequelize_1.DataTypes.INTEGER,
-        allowNull: false
+        allowNull: false,
     },
     creado_por: {
         type: sequelize_1.DataTypes.STRING(50),
-        allowNull: false
+        allowNull: false,
     },
     fecha_creacion: {
         type: sequelize_1.DataTypes.DATE,

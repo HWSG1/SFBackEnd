@@ -16,6 +16,7 @@ const express_1 = __importDefault(require("express"));
 const products_router_1 = __importDefault(require("../routes/products.router"));
 const usuario_router_1 = __importDefault(require("../routes/usuario.router"));
 const objetos_router_1 = __importDefault(require("../routes/objetos.router"));
+const roles_router_1 = __importDefault(require("../routes/roles.router"));
 const connection_1 = __importDefault(require("../database/connection"));
 const cors_1 = __importDefault(require("cors"));
 class Server {
@@ -38,6 +39,7 @@ class Server {
         this.app.use('/api/productos', products_router_1.default);
         this.app.use('/api/usuarios', usuario_router_1.default);
         this.app.use('/api/objetos', objetos_router_1.default);
+        this.app.use('/api/roles', roles_router_1.default);
     }
     mildwares() {
         this.app.use(express_1.default.json());
